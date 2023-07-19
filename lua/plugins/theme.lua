@@ -1,11 +1,20 @@
 return {
-  { "rebelot/kanagawa.nvim" },
-
-  -- Configure LazyVim to load gruvbox
   {
-    "LazyVim/LazyVim",
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
     opts = {
-      colorscheme = "kanagawa",
+      style = "storm",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
+    config = function(_, opts)
+      local tokyonight = require("tokyonight")
+      tokyonight.setup(opts)
+      tokyonight.load()
+    end,
   },
 }
