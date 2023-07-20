@@ -8,6 +8,7 @@ return {
       "neovim/nvim-lspconfig",
     },
     setup = {
+      lsp = { use_defaults = true },
       server_config = {
         filetypes = { "c", "cpp", "objc", "objcpp", "opencl" },
         root_dir = function(fname)
