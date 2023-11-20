@@ -8,7 +8,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 vim.wo.relativenumber = false
 
-vim.cmd("source /usr/local/google/home/tjferrara/.config/nvim/lua/scripts/cctree.vim")
+-- vim.cmd("source /usr/local/google/home/tjferrara/.config/nvim/lua/scripts/cctree.vim")
 
 require("lazy").setup({
   spec = {
@@ -77,4 +77,4 @@ require("nvim-treesitter.configs").setup({
   },
 })
 
-require("ccls").setup({ lsp = { use_defaults = true } })
+-- require("ccls").setup({ lsp = { use_defaults = true } })
